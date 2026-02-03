@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="appeal">
+      <p class="appeal__text">
+        В случае несогласия с результатами экзамена Кандидат имеет право на
+        подачу апелляции:
+      </p>
+
+      <ul class="appeal__list">
+        <li>сроки подачи: не позднее 6 недель с даты письменного экзамена.</li>
+        <li>
+          сроки рассмотрения: от 2 дней до 3 недель с даты получения запроса.
+        </li>
+        <li>стоимость: 9500 рублей* +100 рублей комиссия за онлайн перевод</li>
+      </ul>
+
+      <div class="appeal__steps">
+        <div class="step">
+          <div class="step__content">
+            <h3>Скачайте и заполните</h3>
+            <p>два файла с заявлением<br />на апелляцию</p>
+
+            <div class="files">
+              <a href="#" class="pdf-card">
+                <span class="pdf-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3v12"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M7 10l5 5 5-5"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div class="pdf-top">
+                  <span class="pdf-label">PDF</span>
+                  <span class="pdf-number">1</span>
+                </div>
+                <span class="pdf-text">Скачать</span>
+              </a>
+
+              <a href="#" class="pdf-card">
+                <span class="pdf-btn">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 3v12"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M7 10l5 5 5-5"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <div class="pdf-top">
+                  <span class="pdf-label">PDF</span>
+                  <span class="pdf-number">2</span>
+                </div>
+                <span class="pdf-text">Скачать</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__content">
+            <h3>Отсканируйте и загрузите</h3>
+            <p>заполненные заявления</p>
+
+            <div class="files">
+              <label class="upload-card">
+                <input type="file" class="file-input" title="" />
+                <span class="upload-btn">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 5v14"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M5 12h14"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <div class="upload-content">
+                  <span class="upload-number">1</span>
+                  <span class="upload-check">✓</span>
+                </div>
+              </label>
+
+              <label class="upload-card">
+                <input type="file" class="file-input" title="" />
+                <span class="upload-btn">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 5v14"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M5 12h14"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <div class="upload-content">
+                  <span class="upload-number">2</span>
+                  <span class="upload-check">✓</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step__content">
+            <h3>
+              Оплатите<br /><span class="step__subtitle">подачу апелляции</span>
+            </h3>
+            <p class="price"><strong>Стоимость апелляции - 7700 ₽</strong></p>
+            <button class="btn">ОПЛАТА АПЕЛЛЯЦИИ</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="appeal__info">
+        <p>
+          Важная информация для корректного заполнения заявления:
+        </p>
+        <p>Centre name: BKC in Moscow IELTS Test Centre</p>
+        <p>Centre number: RU087</p>
+        <p>Candidate number: Цифры в верхнем правом углу сертификата/можно не заполнять, если сертификат еще не получен.</p>
+      </div>
+    </section>
+    
+    <script>
+      document.querySelectorAll(".file-input").forEach((input) => {
+  input.addEventListener("change", function () {
+    const card = this.closest(".upload-card");
+    const btn = card.querySelector(".upload-btn svg");
+
+    card.classList.add("uploaded");
+
+    if (btn) {
+      btn.outerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+        <path d="M17 3a2.85 2.85 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z" 
+              stroke="white" stroke-width="2" 
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>`;
+    }
+  });
+});
+
+
+document.querySelectorAll(".upload-card").forEach((card) => {
+  card.addEventListener("click", function (e) {
+    if (
+      this.classList.contains("uploaded") &&
+      !e.target.classList.contains("file-input")
+    ) {
+      const input = this.querySelector(".file-input");
+      const btn = this.querySelector(".upload-btn svg");
+
+      input.value = "";
+      this.classList.remove("uploaded");
+
+      if (btn) {
+        btn.outerHTML = `<svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            <path d="M5 12h14" stroke="white" stroke-width="2" stroke-linecap="round"/>
+          </svg>`;
+      }
+    }
+  });
+});
+    </script>
+  </body>
+</html>
